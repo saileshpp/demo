@@ -558,8 +558,8 @@ header.header__sticky {
     box-shadow: 0 1px 20px -5px var(--custom-secondary);
   }
   header .container .language__btn {
-    width: 23px;
-    height: 23px;
+    width: 24px;
+    height: 24px;
     color: #fff;
     font-size: 10px;
   }
@@ -733,17 +733,27 @@ footer .footer__top .footer__nav li:hover::before {
   padding: 0;
   min-width: 330px;
 }
-.floating__search__section .floating__search .form__wrap .location {
-  background-color: #f6f6f6;
+.floating__search__section .floating__search .form__wrap .location .d-flex {
+  background-color: #fcfcfc;
   border: 1px solid #dadada;
-  padding: 10px 15px;
-  border-radius: 10px;
+  padding: 5px 15px;
+  border-radius: 25px;
 }
-.floating__search__section .floating__search .form__wrap .location .form-control {
+.floating__search__section .floating__search .form__wrap .location .d-flex .form-control {
   background-color: transparent;
 }
 .floating__search__section .floating__search .button {
   max-width: 180px;
+}
+
+.form__1 {
+  background-color: #fcfcfc;
+  border: 1px solid #dadada;
+  padding: 5px 15px;
+  border-radius: 25px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 @media screen and (max-width: 1199px) {
@@ -828,7 +838,7 @@ footer .footer__top .footer__nav li:hover::before {
 }
 @media screen and (max-width: 575px) {
   .floating__search__section {
-    margin-bottom: -20px;
+    margin-bottom: -70px;
   }
   .floating__search__section .floating__search {
     grid-template-columns: repeat(2, 1fr);
@@ -1044,6 +1054,10 @@ footer .footer__top .footer__nav li:hover::before {
   height: 46px;
   left: 50%;
   transform: translate(-80%, 0);
+}
+
+.flatpickr-calendar.open {
+  z-index: 999 !important;
 }
 
 @media screen and (max-width: 575px) {

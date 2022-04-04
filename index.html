@@ -58,7 +58,7 @@
                         data-bs-toggle="dropdown">
                         <span>Welcome Guest</span>
                     </button>
-                    <i class="fa-solid fa-user d-sm-none custom-fs-25" type="button" data-bs-toggle="dropdown"></i>
+                    <i class="fa-solid fa-user d-sm-none custom-fs-27" type="button" data-bs-toggle="dropdown"></i>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Action</a></li>
                         <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -94,13 +94,13 @@
     </header>
 
     <!-- Banner Section -->
-    <section class="home__banner">
+    <section class="home__banner" data-aos="fade-in">
         <img src="img/banner-bg.png" alt="" class="img-fluid d-sm-block d-none">
         <img src="img/home__banner__sm.png" alt="" class="img-fluid d-sm-none">
     </section>
 
     <!-- FLOATING Search MENU Seciton -->
-    <section class="py-0 floating__search__section" data-aos="fade-up">
+    <section class="py-0 floating__search__section" data-aos="fade-up" data-aos-delay="100">
         <div class="container container__md">
             <form action="#">
                 <div class="floating__search">
@@ -108,8 +108,7 @@
                     <!-- LOCATION  -->
                     <div class="form__wrap location__wrap span__2">
                         <div class="location">
-                            <label for="location">LOCATION</label>
-                            <div class="d-flex gap-2 align-items-center">
+                            <div class="form__1">
                                 <input type="search" name="" placeholder="Enter a desinationor property" id=""
                                     class="form-control">
                                 <i class="fa-solid fa-magnifying-glass text-black  p-0 custom-fs-20"></i>
@@ -136,7 +135,7 @@
 
 
                     <!-- ADULTS  -->
-                    <div class="form__wrap border" style="border-bottom: none !important;">
+                    <div class="form__wrap border" style="border-bottom: none !important; padding-bottom: 0 !important;">
                         <label for="adults">adults</label>
                         <select class="form-select form-select-sm form-control" id="adults">
                             <option selected>Any</option>

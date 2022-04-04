@@ -28,7 +28,8 @@ var example = flatpickr('#flatpickr', {
     dateFormat: 'd-m-Y', 
     altInput: true,
     altFormat: "F j, Y",
-    disableMobile: "true"
+    disableMobile: "true",
+    position:'above center',
 });
 
 if (document.querySelector('.sldier__1')) {

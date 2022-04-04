@@ -79,7 +79,9 @@
         }
     }
 }
-
+.flatpickr-calendar.open{
+    z-index: 999 !important;
+}
 @include responsive-max(575px) {
     .section__title {
         text-align: center;
