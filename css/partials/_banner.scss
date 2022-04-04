@@ -1,0 +1,18 @@
+@include responsive-max(768px) {
+    .home__banner {
+        min-height: 500px;
+        img {
+            height: 500px;
+            object-fit: cover;
+        }
+    }
+}
+@include responsive-max(575px) {
+    .home__banner {
+        min-height: 250px;
+        img {
+            height: 250px;
+            object-fit: cover;
+        }
+    }
+}

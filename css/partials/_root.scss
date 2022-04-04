@@ -1,0 +1,47 @@
+fieldset,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+ul,
+ul li {
+    margin: 0;
+    padding: 0;
+}
+
+a,
+.hamburger,
+button {
+    cursor: pointer;
+}
+.form-control {
+    box-shadow: none !important;
+}
+*,
+a:focus,
+a:hover {
+    text-decoration: none !important;
+}
+
+*,
+button:focus {
+    outline: 0;
+}
+
+.container__lg {
+    max-width: 1365px;
+}
+.container__md {
+    max-width: 1280px;
+}
+.container__sm {
+    max-width: 1099px;
+}
+
+body {
+    font-family: Helvetica;
+}

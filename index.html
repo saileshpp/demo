@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everywhere</title>
+
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/hamburgers.min.css">
+    <link rel="stylesheet" href="css/splide-core.min.css">
+    <link rel="stylesheet" href="css/splide.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container container__lg">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                    id="Layer_1" x="0px" y="0px" width="604.8px" height="158.4px" viewBox="0 0 604.8 158.4"
+                    enable-background="new 0 0 604.8 158.4" xml:space="preserve">
+                    <path fill="#A1A3A4"
+                        d="M289.662,38.18l-14.914,55.638l-0.459,1.607l-0.459,1.719c-0.384,1.378-0.728,2.639-1.032,3.786  c-0.994,3.135-1.99,6.081-2.982,8.834c-2.754,7.493-5.928,13.996-9.523,19.501c-10.323,15.602-24.052,23.402-41.182,23.402  c-12.465,0-22.14-4.055-29.023-12.16c-6.5-7.57-9.751-17.705-9.751-30.399c0-6.425,0.917-13.079,2.754-19.961l11.47,3.097  c-1.528,5.583-2.294,11.203-2.294,16.864c0,9.253,2.028,16.557,6.08,21.91c4.588,5.889,11.435,8.833,20.534,8.833  c12.467,0,22.676-5.62,30.629-16.862c2.907-4.207,5.545-9.217,7.917-15.027c1.606-4.056,3.171-8.759,4.703-14.111  c-3.441,1.835-7.19,2.754-11.242,2.754c-6.809,0-12.2-2.409-16.176-7.227c-3.671-4.435-5.506-10.134-5.506-17.093  c0-3.594,0.498-7.151,1.492-10.669l7.341-27.532l11.471,3.097l-7.341,27.532c-0.766,2.908-1.148,5.546-1.148,7.916  c0,3.442,0.726,6.234,2.18,8.374c1.682,2.524,4.168,3.784,7.457,3.784c5.735,0,10.82-3.822,15.257-11.47  c1.376-2.447,2.599-5.123,3.67-8.03c0.154-0.459,0.345-0.956,0.575-1.491c0.075-0.382,0.189-0.763,0.344-1.147l0.115-0.459  l0.113-0.229l0.116-0.344l7.341-27.532L289.662,38.18z" />
+                    <path fill="#A1A3A4"
+                        d="M360.668,53.897c-2.678,7.342-5.468,13.919-8.374,19.731c-8.105,15.984-15.83,23.976-23.172,23.976  c-3.597,0-6.272-1.911-8.03-5.735c-0.765-1.529-1.34-3.328-1.722-5.393c-0.306-1.682-0.536-3.479-0.688-5.391  c-6.731,11.012-13.117,16.519-19.159,16.519c-4.284,0-7.302-2.639-9.061-7.917c-0.69-1.91-1.148-4.205-1.378-6.881  c-0.229-1.99-0.344-4.131-0.344-6.425c0-4.053,0.306-8.449,0.919-13.192l-2.066-0.575l7.342-27.531l11.471,3.097  c-3.825,14.379-5.736,27.072-5.736,38.086c0,3.672,0.231,6.422,0.69,8.26c3.133-2.983,6.843-8.719,11.127-17.208  c4.97-10.018,9.021-20.763,12.159-32.235l11.472,3.097c-3.9,14.301-5.851,26.884-5.851,37.742c0,1.835,0.076,3.557,0.229,5.163  c0.075,1.225,0.229,2.372,0.459,3.441c3.212-2.906,6.92-8.643,11.127-17.208c4.972-9.941,9.023-20.686,12.16-32.235l11.471,3.097  C364.416,42.923,362.734,48.161,360.668,53.897" />
+                    <path fill="#7C959D"
+                        d="M38.577,93.657c-9.298,0-16.822-2.771-22.573-8.318c-5.751-5.545-8.626-12.762-8.626-21.649v-1.568  c0-6.199,1.148-11.67,3.445-16.413c2.296-4.741,5.647-8.411,10.054-11.007c4.406-2.594,9.635-3.892,15.684-3.892  c8.514,0,15.236,2.643,20.165,7.925c4.929,5.284,7.394,12.651,7.394,22.098v7.339H26.591c0.672,3.397,2.146,6.068,4.425,8.009  c2.277,1.942,5.227,2.913,8.85,2.913c5.975,0,10.643-2.091,14.003-6.274l8.626,10.194c-2.352,3.248-5.685,5.836-9.998,7.758  C48.183,92.695,43.544,93.657,38.577,93.657 M36.449,45.373c-5.527,0-8.813,3.661-9.858,10.979h19.045v-1.457  c0.074-3.024-0.692-5.367-2.297-7.029C41.733,46.205,39.436,45.373,36.449,45.373" />
+                    <polygon fill="#7C959D"
+                        points="95.152,70.075 104.73,31.93 124.615,31.93 104.842,92.536 85.573,92.536 65.8,31.93 85.741,31.93   " />
+                    <path fill="#7C959D"
+                        d="M159.567,93.657c-9.297,0-16.822-2.771-22.572-8.318c-5.751-5.545-8.626-12.762-8.626-21.649v-1.568  c0-6.199,1.147-11.67,3.444-16.413c2.296-4.741,5.647-8.411,10.054-11.007c4.407-2.594,9.635-3.892,15.684-3.892  c8.514,0,15.236,2.643,20.165,7.925c4.93,5.284,7.394,12.651,7.394,22.098v7.339h-37.529c0.672,3.397,2.147,6.068,4.425,8.009  c2.277,1.942,5.228,2.913,8.851,2.913c5.974,0,10.643-2.091,14.003-6.274l8.626,10.194c-2.352,3.248-5.686,5.836-9.999,7.758  C169.174,92.695,164.535,93.657,159.567,93.657 M157.439,45.373c-5.527,0-8.812,3.661-9.858,10.979h19.045v-1.457  c0.074-3.024-0.692-5.367-2.296-7.029C162.723,46.205,160.426,45.373,157.439,45.373" />
+                    <path fill="#7C959D"
+                        d="M229.361,49.013l-6.217-0.448c-5.938,0-9.746,1.868-11.427,5.601v38.37H192.84V31.93h17.7l0.617,7.787  c3.173-5.939,7.599-8.908,13.275-8.908c2.016,0,3.771,0.225,5.265,0.673L229.361,49.013z" />
+                    <path fill="#7C959D"
+                        d="M389.465,38.428c4.033-5.078,9.187-7.618,15.46-7.618c6.684,0,11.726,1.98,15.124,5.937  c3.398,3.959,5.134,9.802,5.21,17.534v38.255h-18.933V54.729c0-3.213-0.655-5.575-1.961-7.087c-1.307-1.513-3.528-2.269-6.665-2.269  c-3.885,0-6.629,1.233-8.235,3.698v43.465h-18.876V6.5h18.876V38.428z" />
+                    <path fill="#7C959D"
+                        d="M465.084,93.657c-9.299,0-16.823-2.771-22.573-8.318c-5.751-5.545-8.626-12.762-8.626-21.649v-1.568  c0-6.199,1.147-11.67,3.444-16.413c2.296-4.741,5.647-8.411,10.055-11.007c4.406-2.594,9.635-3.892,15.684-3.892  c8.514,0,15.235,2.643,20.165,7.925c4.929,5.284,7.394,12.651,7.394,22.098v7.339h-37.529c0.672,3.397,2.147,6.068,4.426,8.009  c2.277,1.942,5.228,2.913,8.851,2.913c5.974,0,10.644-2.091,14.003-6.274l8.626,10.194c-2.353,3.248-5.687,5.836-9.998,7.758  C474.69,92.695,470.051,93.657,465.084,93.657 M462.956,45.373c-5.527,0-8.813,3.661-9.858,10.979h19.045v-1.457  c0.074-3.024-0.691-5.367-2.296-7.029C468.24,46.205,465.943,45.373,462.956,45.373" />
+                    <path fill="#7C959D"
+                        d="M534.877,49.013l-6.217-0.448c-5.938,0-9.746,1.868-11.428,5.601v38.37h-18.877V31.93h17.701l0.616,7.787  c3.174-5.939,7.6-8.908,13.274-8.908c2.017,0,3.771,0.225,5.266,0.673L534.877,49.013z" />
+                    <path fill="#7C959D"
+                        d="M571.007,93.657c-9.299,0-16.823-2.771-22.574-8.318c-5.752-5.545-8.627-12.762-8.627-21.649v-1.568  c0-6.199,1.149-11.67,3.446-16.413c2.296-4.741,5.647-8.411,10.055-11.007c4.405-2.594,9.634-3.892,15.684-3.892  c8.514,0,15.235,2.643,20.165,7.925c4.929,5.284,7.394,12.651,7.394,22.098v7.339H559.02c0.671,3.397,2.146,6.068,4.425,8.009  c2.278,1.942,5.227,2.913,8.85,2.913c5.976,0,10.643-2.091,14.004-6.274l8.626,10.194c-2.353,3.248-5.686,5.836-9.997,7.758  C580.613,92.695,575.972,93.657,571.007,93.657 M568.878,45.373c-5.527,0-8.813,3.661-9.858,10.979h19.045v-1.457  c0.074-3.024-0.691-5.367-2.298-7.029C574.162,46.205,571.866,45.373,568.878,45.373" />
+                </svg>
+            </div>
+
+            <div class="navbar">
+                <div class="btn-group welcome__btn">
+                    <button class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        Welcome Guest
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+
+                        <hr class="dropdown-divider">
+
+                        <li><a class="dropdown-item" href="#">Log Out</a></li>
+                    </ul>
+                </div>
+                <div class="navbar__nav">
+                    <li class="nav__item"><a href="#" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Villas</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Activities</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Contact us</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link btn btn__1 btn__primary">Villa Owners</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link btn btn__black language__btn">ع</a></li>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="#" class="nav__link btn btn__black language__btn d-lg-none">ع</a>
+
+                    <button class="hamburger hamburger--collapse d-lg-none px-0" type="button">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="home__banner">
+        <img src="img/banner-bg.png" alt="" class="img-fluid">
+    </section>
+
+    <!-- FLOATING Search MENU Seciton -->
+    <section class="py-0 floating__search__section" data-aos="fade-up">
+        <div class="container container__md">
+            <form action="#">
+                <div class="floating__search">
+
+                    <!-- LOCATION  -->
+                    <div class="form__wrap location__wrap">
+                        <div class="location">
+                            <label for="location">LOCATION</label>
+                            <div class="d-flex gap-2 align-items-center">
+                                <input type="search" name="" placeholder="Enter a desinationor property" id=""
+                                    class="form-control">
+                                <i class="fa-solid fa-magnifying-glass text-black  p-0 custom-fs-20"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ARRIVAL  -->
+                    <div class="form__wrap border">
+                        <label for="arrival">arrival</label>
+                        <div class="d-flex align-items-center">
+                            <input id="flatpickr" class="form-control bg-white" placeholder="DD MM YYYY"><label
+                                for="flatpickr"><i class="fa-solid fa-calendar-days"></i></label>
+                        </div>
+                    </div>
+
+                    <!-- DEPARTURE  -->
+                    <div class="form__wrap border">
+                        <label for="departure">departure</label>
+                        <div class="d-flex align-items-center">
+                            <input id="flatpickr" class="form-control bg-white" placeholder="DD MM YYYY"><label
+                                for="flatpickr"><i class="fa-solid fa-calendar-days"></i></label>
+                        </div>
+                    </div>
+
+
+                    <!-- ADULTS  -->
+                    <div class="form__wrap border">
+                        <label for="adults">adults</label>
+                        <select class="form-select form-select-sm form-control" id="adults">
+                            <option selected>Any</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+
+                    <!-- KIDS  -->
+                    <div class="form__wrap">
+                        <label for="kids">kids</label>
+                        <select class="form-select form-select-sm form-control" id="kids">
+                            <option selected>Any</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+
+                    <!-- BTN  -->
+                    <div class="form__wrap button">
+                        <button class="btn btn__secondary">CHECK AVALABILITY</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- OFFER SECTION  -->
+    <section class="offer__section" data-aos="fade-in">
+        <div class="container container__sm">
+            <div class="alert alert-dismissible fade show" role="alert">
+                <div class="text text-white">
+                    <p>Discover Early 2022 Deals</p>
+                    <h3 class="mb-4">Kick off your new-year travels with 15% off stays</h3>
+
+                    <a href="#" class="btn btn-primary rounded-0">Find Deals</a>
+                </div>
+                <button type="button" class="btn-close text-white" data-bs-dismiss="alert" aria-label="Close"><i
+                        class="fa-solid fa-xmark-large text-white"></i></button>
+                <img src="img/kalisa-veer-Y1Ek7_a0wJ0-unsplash.jpg" alt="" class="bg__img img-fluid">
+            </div>
+        </div>
+    </section>
+
+    <!-- ATTRACTIONS SLIDER -->
+    <section class="py-5 overflow-hidden">
+        <div class="container">
+            <div class="section__title" data-aos="fade-in">
+                <h3> Hatta <span>Attractions</span> </h3>
+            </div>
+
+            <div class="splide sldier__1">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide" data-aos="fade-left"> <a href="#" class="card__1">
+                                <div class="img__wrap">
+                                    <img src="img/Attractions.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="body">
+                                    <h3>Hatta 360 Observatory</h3>
+                                    <p>Timings: 24/7</p>
+                                </div>
+                            </a></li>
+                        <li class="splide__slide" data-aos="fade-left"> <a href="#" class="card__1">
+                                <div class="img__wrap">
+                                    <img src="img/Attractions.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="body">
+                                    <h3>Hatta Honey Discovery Center</h3>
+                                    <p>Timings: 9am - 5pm</p>
+                                </div>
+                            </a></li>
+                        <li class="splide__slide" data-aos="fade-left"><a href="#" class="card__1">
+                                <div class="img__wrap">
+                                    <img src="img/Attractions.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="body">
+                                    <h3>Hata Sign</h3>
+                                    <p>Timings: 24/7</p>
+                                </div>
+                            </a></li>
+                        <li class="splide__slide" data-aos="fade-left"> <a href="#" class="card__1">
+                                <div class="img__wrap">
+                                    <img src="img/Attractions.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="body">
+                                    <h3>Hatta Falaj</h3>
+                                    <p>Timings: 24/7</p>
+                                </div>
+                            </a></li>
+                        <li class="splide__slide" data-aos="fade-left"> <a href="#" class="card__1">
+                                <div class="img__wrap">
+                                    <img src="img/Attractions.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="body">
+                                    <h3>Swan Lake</h3>
+                                    <p>Timings: 24/7</p>
+                                </div>
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERENCE  -->
+    <section class="py-5 bg-light overflow-hidden">
+        <div class="container">
+            <div class="section__title" data-aos="fade-in">
+                <h3> EXPERENCE The <span>Perfect Vacation</span> </h3>
+            </div>
+
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-2 col-6 mb-4 mb-md-0" data-aos="fade-left">
+                    <div class="card__2">
+                        <div class="icon">
+                            <img src="img/001-landscape.png" alt="" class="img-fluid">
+                        </div>
+                        <h3>VIEWS</h3>
+                    </div>
+                </div>
+                <div class="col-md-2 col-6 mb-4 mb-md-0" data-aos="fade-left" data-aos-delay="100">
+                    <div class="card__2">
+                        <div class="icon">
+                            <img src="img/002-villa.png" alt="" class="img-fluid">
+                        </div>
+                        <h3>SPACE</h3>
+                    </div>
+                </div>
+                <div class="col-md-2 col-6 mb-4 mb-md-0" data-aos="fade-left" data-aos-delay="200">
+                    <div class="card__2">
+                        <div class="icon">
+                            <img src="img/003-customer-service.png" alt="" class="img-fluid">
+                        </div>
+                        <h3>SERVICES</h3>
+                    </div>
+                </div>
+                <div class="col-md-2 col-6 mb-4 mb-md-0" data-aos="fade-left" data-aos-delay="300">
+                    <div class="card__2">
+                        <div class="icon">
+                            <img src="img/004-best-price.png" alt="" class="img-fluid">
+                        </div>
+                        <h3>VALUE</h3>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center" data-aos="fade-in">
+                <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+                    <div class="card__3">
+                        <div class="wrap">
+                            <h3>The Palm House Hatta</h3>
+                            <p class="quote">
+                                I could not have asked for a better stay than The Palm House Hatta. Thanks to
+                                Everywhere.
+                            </p>
+                        </div>
+                        <p class="name">
+                            Khalid from Abu Dhabi
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+                    <div class="card__3">
+                        <div class="wrap">
+                            <h3>Mughaibar Fort</h3>
+                            <p class="quote">
+                                I could not have asked for a better stay than The Palm House Hatta. Thanks to
+                                Everywhere.
+                            </p>
+                        </div>
+                        <p class="name">
+                            Majed from Sharjah
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+                    <div class="card__3">
+                        <div class="wrap">
+                            <h3>hatta Mountains Lodge</h3>
+                            <p class="quote">
+                                I could not have asked for a better stay than The Palm House Hatta. Thanks to
+                                Everywhere.
+                            </p>
+                        </div>
+                        <p class="name">
+                            Micheal from Australia
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer__top">
+            <div class="container">
+                <div class="row row-cols-5">
+                    <div class="col-lg col-md-4 col-6 mb-4 mb-lg-0">
+                        <h3>GUESTS</h3>
+                        <ul class="footer__nav">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Book Your Stay</a></li>
+                            <li><a href="#">Nearby Attractions</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg col-md-4 col-6 mb-4 mb-lg-0">
+                        <h3>PARTNERS</h3>
+                        <ul class="footer__nav">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Our Partners</a></li>
+                            <li><a href="#">Partner With Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg col-md-4 col-6 mb-4 mb-lg-0">
+                        <h3>RESOURCES</h3>
+                        <ul class="footer__nav">
+                            <li><a href="#">In The News</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cancellation/Refund Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg col-md-4 col-6 mb-4 mb-lg-0">
+                        <h3>SOCIAL</h3>
+                        <ul class="footer__nav">
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">Youtube</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg col-md-4 col-6 mb-4 mb-lg-0">
+                        <h3>CONTACT</h3>
+                        <ul class="footer__nav">
+                            <li><a href="tel:9714 567 8910">+9714 567 8910</a></li>
+                            <li><a href="mailto:info@geteverywhere.ae">info@GetEveryWhere.ae</a></li>
+                            <li>Dubai, UAE</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bot py-4">
+            <div class="container d-flex align-items-center justify-content-between">
+                <p>© 2022 Everywhere | All rights reserved</p>
+                <img src="img/Layer 11.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JS  -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/splide.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

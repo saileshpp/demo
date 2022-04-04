@@ -1,0 +1,145 @@
+header {
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1030;
+    transition: var(--custom-transition);
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        .logo {
+            svg {
+                width: 100%;
+                max-width: 250px;
+                height: max-content;
+            }
+        }
+        .navbar {
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-end;
+            .navbar__nav {
+                display: flex;
+                list-style: none;
+                gap: 30px;
+                font-size: 18px;
+                align-items: center;
+                transition: var(--custom-transition);
+                .nav__link {
+                    color: #000;
+                    transition: var(--custom-transition);
+                    border-bottom: 2px solid transparent;
+                    &:hover,
+                    &.active {
+                        color: var(--custom-secondary);
+                        border-bottom-color: var(--custom-secondary);
+                    }
+                }
+                .btn {
+                    color: #fff;
+                    border: 1px solid transparent;
+                    &:hover {
+                        border-color: var(--custom-primary);
+                        background-color: transparent;
+                        color: var(--custom-primary);
+                    }
+                }
+            }
+            .welcome__btn {
+                .btn {
+                    padding: 0;
+                }
+                .dropdown-menu {
+                    left: auto;
+                    right: 0px;
+                    border-color: rgb(182, 182, 182);
+                    background-color: #e9e8e8;
+                    .dropdown-item {
+                        color: var(--bs-black);
+                        transition: var(--custom-transition);
+                        &:hover {
+                            background-color: var(--custom-primary);
+                        }
+                    }
+                }
+            }
+        }
+        .language__btn {
+            background-color: #000;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            padding: 0;
+            display: grid;
+            align-items: center;
+            color: #fff;
+            &:hover {
+                border-color: #000;
+                color: #000;
+                background-color: transparent;
+            }
+        }
+    }
+    &.header__sticky {
+        background-color: #fff;
+        box-shadow: 0 0 10px 0px var(--custom-secondary);
+    }
+}
+@include responsive-max(992px) {
+    header {
+        .container {
+            .navbar {
+                &.is-active {
+                    .navbar__nav {
+                        transform: translateX(0);
+                    }
+                }
+                .navbar__nav {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    background-color: #fff;
+                    flex-direction: column;
+                    justify-content: center;
+                    transform: translateX(100%);
+                    .nav__link {
+                        font-size: 25px;
+                    }
+                    .language__btn {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@include responsive-max(575px) {
+    header {
+        padding: 0;
+        .container {
+            .logo {
+                svg {
+                    max-width: 200px;
+                }
+            }
+            .navbar {
+                gap: 0px;
+                .hamburger {
+                    padding: 0;
+                    padding-top: 10px;
+                }
+            }
+            .language__btn {
+                width: 23px;
+                height: 23px;
+                color: #fff;
+                font-size: 10px;
+            }
+        }
+    }
+}
