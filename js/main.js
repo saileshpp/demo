@@ -25,7 +25,10 @@ hamburger.addEventListener('click', () => {
 })
 
 var example = flatpickr('#flatpickr', {
-    dateFormat: 'd-m-Y',
+    dateFormat: 'd-m-Y', 
+    altInput: true,
+    altFormat: "F j, Y",
+    disableMobile: "true"
 });
 
 if (document.querySelector('.sldier__1')) {
