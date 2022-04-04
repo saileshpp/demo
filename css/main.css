@@ -576,10 +576,11 @@ header.header__sticky {
 }
 @media screen and (max-width: 575px) {
   .home__banner {
-    min-height: 50vh;
+    min-height: 60vh;
   }
   .home__banner img {
-    height: 50vh;
+    width: 100%;
+    height: 60vh;
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -832,7 +833,7 @@ footer .footer__top .footer__nav li:hover::before {
   .floating__search__section .floating__search {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    transform: translateY(-15%);
+    transform: translateY(-30%);
     padding: 30px 20px;
   }
   .floating__search__section .floating__search .form__wrap {
