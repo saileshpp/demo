@@ -54,9 +54,11 @@
 
             <div class="navbar">
                 <div class="btn-group welcome__btn">
-                    <button class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                        Welcome Guest
+                    <button class="btn btn-sm dropdown-toggle d-none d-sm-block" type="button"
+                        data-bs-toggle="dropdown">
+                        <span>Welcome Guest</span>
                     </button>
+                    <i class="fa-solid fa-user d-sm-none custom-fs-25" type="button" data-bs-toggle="dropdown"></i>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Action</a></li>
                         <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -93,7 +95,8 @@
 
     <!-- Banner Section -->
     <section class="home__banner">
-        <img src="img/banner-bg.png" alt="" class="img-fluid">
+        <img src="img/banner-bg.png" alt="" class="img-fluid d-sm-block d-none">
+        <img src="img/home__banner__sm.png" alt="" class="img-fluid d-sm-none">
     </section>
 
     <!-- FLOATING Search MENU Seciton -->

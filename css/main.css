@@ -483,7 +483,7 @@ header .container .navbar .welcome__btn .dropdown-menu {
   left: auto;
   right: 0px;
   border-color: rgb(182, 182, 182);
-  background-color: #e9e8e8;
+  background-color: #fff;
 }
 header .container .navbar .welcome__btn .dropdown-menu .dropdown-item {
   color: var(--bs-black);
@@ -513,6 +513,10 @@ header.header__sticky {
 }
 
 @media screen and (max-width: 992px) {
+  header .container .navbar {
+    flex-direction: row;
+    align-items: center;
+  }
   header .container .navbar.is-active .navbar__nav {
     transform: translateX(0);
   }
@@ -539,14 +543,19 @@ header.header__sticky {
     padding: 0;
   }
   header .container .logo svg {
-    max-width: 200px;
+    max-width: 150px;
   }
   header .container .navbar {
-    gap: 0px;
+    gap: 10px;
   }
   header .container .navbar .hamburger {
     padding: 0;
     padding-top: 10px;
+  }
+  header .container .navbar .welcome__btn .dropdown-menu {
+    transform: translate(15%, 15px);
+    border: none;
+    box-shadow: 0 1px 20px -5px var(--custom-secondary);
   }
   header .container .language__btn {
     width: 23px;
@@ -567,10 +576,10 @@ header.header__sticky {
 }
 @media screen and (max-width: 575px) {
   .home__banner {
-    min-height: 250px;
+    min-height: 50vh;
   }
   .home__banner img {
-    height: 250px;
+    height: 50vh;
     -o-object-fit: cover;
        object-fit: cover;
   }

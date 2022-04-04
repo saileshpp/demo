@@ -9,9 +9,9 @@
 }
 @include responsive-max(575px) {
     .home__banner {
-        min-height: 250px;
+        min-height: 50vh;
         img {
-            height: 250px;
+            height: 50vh;
             object-fit: cover;
         }
     }

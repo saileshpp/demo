@@ -56,7 +56,7 @@ header {
                     left: auto;
                     right: 0px;
                     border-color: rgb(182, 182, 182);
-                    background-color: #e9e8e8;
+                    background-color: #fff;
                     .dropdown-item {
                         color: var(--bs-black);
                         transition: var(--custom-transition);
@@ -92,11 +92,14 @@ header {
     header {
         .container {
             .navbar {
+                flex-direction: row;
+                align-items: center;
                 &.is-active {
                     .navbar__nav {
                         transform: translateX(0);
                     }
                 }
+
                 .navbar__nav {
                     position: fixed;
                     top: 0;
@@ -124,14 +127,22 @@ header {
         .container {
             .logo {
                 svg {
-                    max-width: 200px;
+                    max-width: 150px;
                 }
             }
             .navbar {
-                gap: 0px;
+                gap: 10px;
                 .hamburger {
                     padding: 0;
                     padding-top: 10px;
+                }
+                .welcome__btn {
+                    
+                    .dropdown-menu {
+                        transform: translate(15%,15px);
+                        border: none;
+                        box-shadow: 0 1px 20px -5px var(--custom-secondary);
+                    }
                 }
             }
             .language__btn {
