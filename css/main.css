@@ -689,17 +689,24 @@ footer .footer__top .footer__nav li:hover::before {
 .floating__search__section .floating__search .form__wrap {
   flex-grow: 1;
   height: 100%;
-  padding: 0 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  max-width: 200px;
+}
+.floating__search__section .floating__search .form__wrap:not(.border) {
+  padding-left: 20px;
+}
+.floating__search__section .floating__search .form__wrap.border {
+  border: none !important;
+  border-right: 2px solid var(--custom-secondary) !important;
+  padding-right: 20px;
 }
 .floating__search__section .floating__search .form__wrap label {
   text-transform: uppercase;
   margin-bottom: 2px;
+  font-size: 16px;
+  font-weight: 600;
 }
 .floating__search__section .floating__search .form__wrap .form-control {
   padding-inline: 0 !important;
@@ -720,11 +727,6 @@ footer .footer__top .footer__nav li:hover::before {
 }
 .floating__search__section .floating__search .form__wrap select {
   font-weight: 600;
-}
-.floating__search__section .floating__search .form__wrap.border {
-  border: none !important;
-  border-right: 2px solid var(--custom-secondary) !important;
-  padding-right: 20px;
 }
 .floating__search__section .floating__search .form__wrap.location__wrap {
   padding: 0;
@@ -828,7 +830,7 @@ footer .footer__top .footer__nav li:hover::before {
     margin-bottom: -20px;
   }
   .floating__search__section .floating__search {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     transform: translateY(-15%);
     padding: 30px 20px;
@@ -836,6 +838,7 @@ footer .footer__top .footer__nav li:hover::before {
   .floating__search__section .floating__search .form__wrap {
     flex-grow: 0.5;
     padding: 0 20px;
+    max-width: 100%;
   }
   .floating__search__section .floating__search .form__wrap label {
     text-transform: uppercase;
@@ -851,16 +854,24 @@ footer .footer__top .footer__nav li:hover::before {
   .floating__search__section .floating__search .form__wrap select {
     font-weight: 600;
   }
-  .floating__search__section .floating__search .form__wrap.border {
-    border: none !important;
+  .floating__search__section .floating__search .form__wrap.border:not(:last-of-type) {
+    border-bottom: 1px solid var(--custom-secondary) !important;
+    padding-bottom: 15px;
   }
   .floating__search__section .floating__search .form__wrap.location__wrap {
     min-width: 100%;
   }
+  .floating__search__section .floating__search .span__2 {
+    grid-column: span 2;
+  }
   .floating__search__section .floating__search .button {
-    grid-column: span 1;
+    grid-column: span 2;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 0;
+    width: 100%;
+    max-width: 100%;
+    border-top: 1px solid var(--custom-secondary);
+    padding-top: 15px;
   }
 }
 .card__1 {
