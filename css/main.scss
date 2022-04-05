@@ -79,8 +79,23 @@
         }
     }
 }
-.flatpickr-calendar.open{
-    z-index: 999 !important;
+.flatpickr-calendar.open {
+    z-index: 1040 !important;
+}
+.rating {
+    display: flex;
+    gap: 3px;
+    font-size: 13px;
+    i {
+        color: #ff7e00;
+    }
+}
+.ad1 {
+    text-align: center;
+    img {
+        object-fit: cover;
+        border-radius: 10px;
+    }
 }
 @include responsive-max(575px) {
     .section__title {
@@ -108,6 +123,11 @@
                 left: 50%;
                 transform: translate(-80%, 0);
             }
+        }
+    }
+    .ad1 {
+        img {
+            height: 120px;
         }
     }
 }

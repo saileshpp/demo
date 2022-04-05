@@ -25,11 +25,11 @@ hamburger.addEventListener('click', () => {
 })
 
 var example = flatpickr('#flatpickr', {
-    dateFormat: 'd-m-Y', 
+    dateFormat: 'd-m-Y',
     altInput: true,
     altFormat: "F j, Y",
     disableMobile: "true",
-    position:'above center',
+    position: 'above center',
 });
 
 if (document.querySelector('.sldier__1')) {
@@ -55,3 +55,18 @@ if (document.querySelector('.sldier__1')) {
         }
     }).mount();
 }
+
+$(function () {
+    $("#slider-range").slider({
+        range: true,
+        min: 0,
+        max: 4040,
+        values: [0, 4040],
+        slide: function (event, ui) {
+            $("#min").val(ui.values[0]);
+            $("#max").val(ui.values[1]);
+        }
+    });
+    $("#min").val($("#slider-range").slider("values", 0));
+    $("#max").val($("#slider-range").slider("values", 1));
+});
